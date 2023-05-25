@@ -3,11 +3,11 @@ package backend.model;
 import java.util.ArrayList;
 
 public class Medewerker {
-    String naam;
-    String woonplaats;
-    String email;
-    String wachtwoord;
-    static ArrayList<Medewerker> alleMedewerkers = new ArrayList<Medewerker>();
+    private String naam;
+    private String woonplaats;
+    private String email;
+    private String wachtwoord;
+    private static ArrayList<Medewerker> alleMedewerkers = new ArrayList<Medewerker>();
 
     public Medewerker(String naam, String woonplaats, String email, String wachtwoord) {
         this.naam = naam;

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Resevering {
-    Date datum;
-    Date tijd;
-    int aantal;
-    static ArrayList<Resevering> alleReseveringen = new ArrayList<Resevering>();
+    private Date datum;
+    private Date tijd;
+    private int aantal;
+    private static ArrayList<Resevering> alleReseveringen = new ArrayList<Resevering>();
 
     public Resevering(Date datum, Date tijd, int aantal) {
         this.datum = datum;

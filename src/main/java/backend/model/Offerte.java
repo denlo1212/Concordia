@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Offerte {
-    String naam;
-    int telefoonnummer;
-    String bruiloft;
-    Date datum;
-    Date tijd;
-    int aantal;
-    String overig;
-    static ArrayList<Offerte> alleOffertes = new ArrayList<Offerte>();
+    private String naam;
+    private int telefoonnummer;
+    private String bruiloft;
+    private Date datum;
+    private Date tijd;
+    private int aantal;
+    private String overig;
+    private static ArrayList<Offerte> alleOffertes = new ArrayList<Offerte>();
 
     public Offerte(String naam, int telefoonnummer, String bruiloft, Date datum, Date tijd, int aantal, String overig) {
         this.naam = naam;

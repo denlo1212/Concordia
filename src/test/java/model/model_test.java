@@ -18,6 +18,10 @@ public class model_test {
 
     @BeforeEach
     public void init(){
+        medewerker.getAlleMedewerkers().clear();
+        offerte.getAlleOffertes().clear();
+        resevering.getAlleReseveringen().clear();
+
         Medewerker medewerker1 = new Medewerker("John Doe", "Amsterdam", "john@example.com", "password1");
         Medewerker medewerker2 = new Medewerker("Jane Smith", "Rotterdam", "jane@example.com", "password2");
         Medewerker medewerker3 = new Medewerker("David Johnson", "The Hague", "david@example.com", "password3");
@@ -33,7 +37,7 @@ public class model_test {
 
     @Test
     void aantalMedewerkers(){
-        assertEquals(9,medewerker.getAlleMedewerkers().size());
+        assertEquals(3,medewerker.getAlleMedewerkers().size());
     }
 
     @Test
@@ -43,7 +47,7 @@ public class model_test {
 
     @Test
     void aantalReseveringen(){
-        assertEquals(6,resevering.getAlleReseveringen().size());
+        assertEquals(3,resevering.getAlleReseveringen().size());
     }
 
 

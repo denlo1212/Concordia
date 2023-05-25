@@ -5,7 +5,7 @@
   <groupId>org.example</groupId>
   <artifactId>Concordia_website</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>Concordia_website</name>
   <url>http://maven.apache.org</url>
