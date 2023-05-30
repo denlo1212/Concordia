@@ -55,4 +55,8 @@ public class Offerte {
     public static ArrayList<Offerte> getAlleOffertes() {
         return alleOffertes;
     }
+
+    public static void  setAlleOffertes(ArrayList<Offerte> dataAlleOffertes) {
+        alleOffertes = dataAlleOffertes;
+    }
 }

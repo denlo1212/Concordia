@@ -36,4 +36,8 @@ public class Medewerker {
     public static ArrayList<Medewerker> getAlleMedewerkers() {
         return alleMedewerkers;
     }
+
+    public static void  setAlleMedewerkers(ArrayList<Medewerker> dataAlleMedewerkers){
+        alleMedewerkers = dataAlleMedewerkers;
+    }
 }

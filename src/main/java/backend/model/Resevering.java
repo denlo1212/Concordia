@@ -31,4 +31,8 @@ public class Resevering {
     public static ArrayList<Resevering> getAlleReseveringen() {
         return alleReseveringen;
     }
+
+    public static void  setAlleReseveringen(ArrayList<Resevering> dataAlleReseveringen) {
+        alleReseveringen = dataAlleReseveringen;
+    }
 }
