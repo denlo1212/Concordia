@@ -18,14 +18,7 @@ const init = function (){
 }
 
 const send = function (event){
-
 }
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded")
 
 
