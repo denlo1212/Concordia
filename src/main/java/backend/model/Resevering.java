@@ -5,13 +5,11 @@ import java.util.Date;
 
 public class Resevering {
     private Date datum;
-    private Date tijd;
     private int aantal;
     private static ArrayList<Resevering> alleReseveringen = new ArrayList<Resevering>();
 
-    public Resevering(Date datum, Date tijd, int aantal) {
+    public Resevering(Date datum, int aantal) {
         this.datum = datum;
-        this.tijd = tijd;
         this.aantal = aantal;
         alleReseveringen.add(this);
     }
@@ -20,9 +18,6 @@ public class Resevering {
         return datum;
     }
 
-    public Date getTijd() {
-        return tijd;
-    }
 
     public int getAantal() {
         return aantal;
