@@ -1,18 +1,4 @@
 // all fields for the form
-let name = document.getElementById("name")
-let type = document.getElementById("type_zaal")
-let phoneNumber = document.getElementById("phone")
-let mail = document.getElementById("email")
-let date = document.getElementById("date")
-let numberOfPeople = document.getElementById("aantal")
-let other = document.getElementById("overig")
-let submitButton = document.getElementById("submit_button")
-let form = document.offerte;
-const init = function (){
-    submitButton.addEventListener("click", send)
-}
-
-
 const name = document.querySelector('#name').value;
 const typeZaal = document.querySelector('#type_zaal').value;
 const phone = document.querySelector('#phone').value;
@@ -43,12 +29,12 @@ function nieuwForm(name, phone, typeZaal, email, datum, aantal, overig) {
                 overig: overig
             }),
             header: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer '
-            //     + thisIsBob
+                'Content-Type': 'application/json'
+                // 'Authorization': 'Bearer '
+                //     + thisIsBob
             }
         })
-        .then();
+        .then(console.log(name, phone, typeZaal, email, datum, aantal, overig))
 
 
 }
