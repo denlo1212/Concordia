@@ -23,6 +23,9 @@ public class OfferteResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createOfferte(String requestBody) {
+
+        System.out.println(requestBody);
+
         GsonBuilder gsonBuilder = new GsonBuilder();
 //        gsonBuilder.setDateFormat("yyyy-MM-dd");
 //        gsonBuilder.setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
