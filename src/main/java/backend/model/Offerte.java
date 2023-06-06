@@ -1,23 +1,21 @@
 package backend.model;
 
-import javax.validation.constraints.Email;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Offerte {
     private String naam;
     private int telefoonnummer;
-    private String bruiloft;
+    private String type_feest;
     private String email;
-    private Date datum;
+    private String datum;
     private int aantal;
     private String overig;
     private static ArrayList<Offerte> alleOffertes = new ArrayList<Offerte>();
 
-    public Offerte(String naam, int telefoonnummer, String bruiloft, String email, Date datum, int aantal, String overig) {
+    public Offerte(String naam, int telefoonnummer, String bruiloft, String email, String datum, int aantal, String overig) {
         this.naam = naam;
         this.telefoonnummer = telefoonnummer;
-        this.bruiloft = bruiloft;
+        this.type_feest = bruiloft;
         this.email = email;
         this.datum = datum;
         this.aantal = aantal;
@@ -33,15 +31,15 @@ public class Offerte {
         return telefoonnummer;
     }
 
-    public String getBruiloft() {
-        return bruiloft;
+    public String getType_feest() {
+        return type_feest;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public Date getDatum() {
+    public String getDatum() {
         return datum;
     }
 

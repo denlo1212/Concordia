@@ -21,5 +21,7 @@ public class App
             System.out.println("Aantal: " + resevering.getAantal());
             System.out.println("---------------------------------");
         }
+
+        System.out.println(new Date());
     }
 }
