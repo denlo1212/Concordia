@@ -1,7 +1,5 @@
-export default class CreateOfferte {
-    constructor() {
-        this.base_url = "http://localhost:8080"
-    }
+export class CreateOfferte {
+
 
 
 
