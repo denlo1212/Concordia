@@ -1,7 +1,7 @@
 export class CreateOfferte {
 
-
-
+    constructor() {
+    }
 
     formSubmit(name, phone, typeZaal, email, datum, aantal, overig) {
         return fetch('http://localhost:8080/concordia/offerte', {
