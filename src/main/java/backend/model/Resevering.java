@@ -1,21 +1,27 @@
 package backend.model;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Resevering {
-    private Date datum;
+
+    private String datum;
     private int aantal;
+    private String tijd;
     private static ArrayList<Resevering> alleReseveringen = new ArrayList<Resevering>();
 
-    public Resevering(Date datum, int aantal) {
+    public Resevering(String datum, String uren, int aantal) {
         this.datum = datum;
         this.aantal = aantal;
+        this.tijd = uren;
         alleReseveringen.add(this);
     }
 
-    public Date getDatum() {
+    public String  getDatum() {
         return datum;
+    }
+
+    public String getTijd() {
+        return tijd;
     }
 
 

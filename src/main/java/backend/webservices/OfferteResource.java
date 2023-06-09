@@ -4,7 +4,6 @@ import backend.model.Offerte;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

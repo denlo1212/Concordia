@@ -36,9 +36,9 @@ public class model_test {
         Offerte offerte2 = new Offerte("Jane Smith", 987654321, "Bruiloft","test@gmail.com", "2024-06-06", 50, "Photography services");
         Offerte offerte3 = new Offerte("David Johnson", 555555555, "Bruiloft", "test@gmail.com", "2024-06-06", 200, "Live music band");
 
-        Resevering resevering1 = new Resevering(new Date(), 5);
-        Resevering resevering2 = new Resevering(new Date(), 10);
-        Resevering resevering3 = new Resevering(new Date(), 3);
+        Resevering resevering1 = new Resevering("2024-06-06","15:30", 5);
+        Resevering resevering2 = new Resevering("2024-06-06", "15:30",10);
+        Resevering resevering3 = new Resevering("2024-06-06", "15:30",3);
     }
 
     @Test

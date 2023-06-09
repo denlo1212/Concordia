@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concordia</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free shit baby!">
+    <meta name="keywords" content="idk something">
+    <meta name="author" content="Danilo Bos">
+    <meta name="viewport" content="width=device-with, initial-scale1.0">
+    <link rel="stylesheet" href="../styles/resevering.css">
+    <script type="module" src="../view/submitReservation.js"></script>
+    <link rel="icon" href="../assets/img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+<header>
+    <img alt="logo" src="../assets/img/logo.png"
+         width="200"
+         heigt="100"/>
+
+    <nav>
+        <ul class="nav_links">
+            <li><a href="../index.html">homepage </a></li>
+            <li><a href="resevering.html">reseveringen </a></li>
+            <li><a href="zaalverhuur.html">zaalverhuur </a></li>
+        </ul>
+    </nav>
+    <a href="#">
+        <button>Login</button>
+    </a>
+</header>
+
+
+<main>
+    <div>
+        <form method="post" name="resevering" class="container" style="width: 30%;">
+            <fieldset>
+                <legend>Resevering</legend>
+
+                <div class="item">
+                    <label for="resevering">Kies je datum voor u resevering:</label>
+                    <input type="date" name="resevering" id="resevering" required>
+                </div>
+
+                <div class="item">
+                    <label for="time">Kies je tijd voor u reservering tussen (13:00-20:00):</label>
+                    <input type="time" id="time" name="time"
+                           min="13:00" max="20:00" required>
+                </div>
+
+                <div class="item">
+                    <label for="aantal">Hoeveel mensen komen er?:</label>
+                    <input type="number" id="aantal" name="aantal" required value="12">
+                </div>
+<!--                <div class="item">-->
+
+<!--                </div>-->
+            </fieldset>
+
+            <div class="buttons">
+                <button type="submit" id="submit_button" name="submit_button">Reserveer</button>
+                <button type="reset" id="reset_button" name="reset_button">Reset</button>
+            </div>
+        </form>
+    </div>
+
+</main>
+
+</body>
+</html>
