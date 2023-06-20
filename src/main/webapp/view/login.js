@@ -23,39 +23,44 @@ document.forms.login.addEventListener('submit', event => {
     const password = document.getElementById('password').value;
 
     service.login(email, password)
-        .then(() => {
+        .then((data) => {
+            const token = data.jwt;
+            localStorage.setItem('token', token);
             window.location.reload();
         })
         .catch(error => {
             console.log(error);
             alert("Geen correcte gegevens")
         });
-});
-
-
-document.forms.login.addEventListener('submit', event => {
-    event.preventDefault();
-
-    service.logout()
-        .then(() => {
-            window.location.reload();
-            alert("je bent uitgelogt")
-        })
-
-        .catch(error => {
-            console.log(error);
-            alert("er ging iets fout");
-        });
-});
-
-refresh();
-
-service.getUser().then(user => {
-    if (!user) {
-        service.logout();
-    }
-
-    refresh();
 })
+
+
+
+
+
+// document.forms.login.addEventListener('submit', event => {
+//     event.preventDefault();
+//
+//     service.logout()
+//         .then(() => {
+//             window.location.reload();
+//             alert("je bent uitgelogt")
+//         })
+//
+//         .catch(error => {
+//             console.log(error);
+//             alert("er ging iets fout");
+//         });
+// });
+//
+// refresh();
+
+// service.getUser().then(user => {
+//     if (!user) {
+//         service.logout();
+//     }
+//
+//     refresh();
+// })
 
 

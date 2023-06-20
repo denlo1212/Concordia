@@ -8,12 +8,14 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.AbstractMap;
 import java.util.List;
 
 @Path("login")
 public class loginResource {
 
     @GET
+
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUser(@Context HttpHeaders headers) {
         List<String> authorizationHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
@@ -44,11 +46,20 @@ public class loginResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response generateToken(Medewerker medewerker) {
 
+        System.out.println("leuk printje voor de medewerker");
+
         boolean isAuthenticated = medewerker.authenticateUser();
+
+        System.out.println(medewerker);
+        System.out.println(medewerker.getUsername());
 
         if (isAuthenticated) {
             String token = medewerker.generateJWTToken();
-            return Response.ok().entity("{\"token\": \"" + token + "\"}").build();
+            System.out.println(token);
+            return Response.ok()
+                    .entity(new AbstractMap.SimpleEntry<>("jwt", token))
+                    .build();
+
         }
 
         else {

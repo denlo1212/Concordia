@@ -22,21 +22,14 @@ export default class LoginService {
             },
         }).then(response => {
             if (response.ok) {
-                // Login successful
+                console.log(response.json)
                 return response.json();
             } else {
-                // Login failed
+
                 throw new Error('Invalid username or password');
             }
         })
-            .then(data => {
-                const token = data.token; // Assuming the token is returned in the response data
-                localStorage.setItem('token', token);
-            })
-            .catch(error => {
-                // Handle any errors that occur during the login process
-                return Promise.reject(error);
-            });
+
     }
 
     getUser() {
