@@ -18,20 +18,13 @@ public class ReservationResource {
         return Response.ok(Resevering.getAlleReseveringen()).build();
     }
 
+
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response createReservation(String requestBody){
-        GsonBuilder gsonBuilder = new GsonBuilder();
-        Gson gson = gsonBuilder.create();
-
-        Resevering resevering= gson.fromJson(requestBody, Resevering.class);
-
-        Resevering newResevering = new Resevering(
-                resevering.getDatum(),
-                resevering.getTijd(),
-                resevering.getAantal());
-
+    public Response createReservation(Resevering resevering){
+        Resevering newResevering = new Resevering(resevering.getDatum(),resevering.getTijd(),resevering.getAantal());
+        Resevering.getAlleReseveringen().add(newResevering);
         return Response.ok(newResevering).build();
     }
 

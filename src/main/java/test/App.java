@@ -14,9 +14,9 @@ import java.util.Date;
 public class App 
 {
     public static void main( String[] args ) {
-        Medewerker medewerker1 = new Medewerker("John Doe", "Amsterdam", "john@example.com", "password1");
-        Medewerker medewerker2 = new Medewerker("Jane Smith", "Rotterdam", "jane@example.com", "password2");
-        Medewerker medewerker3 = new Medewerker("David Johnson", "The Hague", "david@example.com", "password3");
+        Medewerker medewerker1 = new Medewerker( "john@example.com", "password1");
+        Medewerker medewerker2 = new Medewerker( "jane@example.com", "password2");
+        Medewerker medewerker3 = new Medewerker( "david@example.com", "password3");
 
         Offerte offerte1 = new Offerte("John Doe", 123456789, "Bruiloft", "test@gmail.com", "2024-06-06", 100, "Extra decorations");
         Offerte offerte2 = new Offerte("Jane Smith", 987654321, "Bruiloft","test@gmail.com", "2024-06-06", 50, "Photography services");

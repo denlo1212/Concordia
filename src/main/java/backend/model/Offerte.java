@@ -1,5 +1,7 @@
 package backend.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 public class Offerte {
@@ -12,7 +14,13 @@ public class Offerte {
     private String overig;
     private static ArrayList<Offerte> alleOffertes = new ArrayList<Offerte>();
 
-    public Offerte(String naam, int telefoonnummer, String bruiloft, String email, String datum, int aantal, String overig) {
+    public Offerte(@JsonProperty("naam")String naam,
+                   @JsonProperty("telefoonnummer")int telefoonnummer,
+                   @JsonProperty("bruiloft")String bruiloft,
+                   @JsonProperty("email")String email,
+                   @JsonProperty("datum")String datum,
+                   @JsonProperty("aantal")int aantal,
+                   @JsonProperty("overig")String overig) {
         this.naam = naam;
         this.telefoonnummer = telefoonnummer;
         this.type_feest = bruiloft;
@@ -20,7 +28,6 @@ public class Offerte {
         this.datum = datum;
         this.aantal = aantal;
         this.overig = overig;
-        alleOffertes.add(this);
     }
 
     public String getNaam() {

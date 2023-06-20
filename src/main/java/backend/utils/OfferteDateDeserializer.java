@@ -1,4 +1,4 @@
-package utils;
+package backend.utils;
 import com.google.gson.*;
 import java.lang.reflect.Type;
 import java.util.Date;

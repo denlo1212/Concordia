@@ -20,13 +20,14 @@ public class offerte_test {
     @Test
     public void testCreateOfferte() {
         // Create a sample JSON request body
-        String requestBody = "{\"naam\":\"John Doe\",\"telefoonnummer\":\"123456789\",\"type_feest\":\"Birthday\",\"email\":\"john@example.com\",\"datum\":\"2023-06-08\",\"aantal\":50,\"overig\":\"Some additional information\"}";
+        Offerte offerte1 = new Offerte("John Doe", 123456789, "Birthday", "john@example.com",
+                "2023-06-08", 50, "Some additional information");
 
         // Create an instance of OfferteResource
         OfferteResource offerteResource = new OfferteResource();
 
         // Call the createOfferte method
-        Response response = offerteResource.createOfferte(requestBody);
+        Response response = offerteResource.createOfferte(offerte1);
 
         // Assert that the response status is OK
         assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());

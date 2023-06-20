@@ -21,16 +21,7 @@ public class OfferteResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response createOfferte(String requestBody) {
-
-        System.out.println(requestBody);
-
-        GsonBuilder gsonBuilder = new GsonBuilder();
-//        gsonBuilder.setDateFormat("yyyy-MM-dd");
-//        gsonBuilder.setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
-        Gson gson = gsonBuilder.create();
-
-        Offerte offerte = gson.fromJson(requestBody, Offerte.class);
+    public Response createOfferte(Offerte offerte) {
 
         Offerte newOfferte = new Offerte(
                 offerte.getNaam(),
@@ -41,6 +32,8 @@ public class OfferteResource {
                 offerte.getAantal(),
                 offerte.getOverig()
         );
+
+        Offerte.getAlleOffertes().add(newOfferte);
 
         return Response.ok(newOfferte).build();
     }

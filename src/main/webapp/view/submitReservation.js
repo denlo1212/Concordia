@@ -1,5 +1,5 @@
-import { CreateReservation} from "../service/CreateReservation.js";
-const createReservation = new CreateReservation();
+import { ReservationService} from "../service/reservation-service.js";
+const createReservation = new ReservationService();
 
 // script.js
 document.addEventListener('DOMContentLoaded', function() {

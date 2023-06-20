@@ -91,18 +91,3 @@ footer{
 /*done*/
 
 
-/*button layout*/
-button{
-    padding: 9px 24px;
-    background-color: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    color: white;
-}
-
-button:hover{
-    background-color: rgba(0,136,169,0.6);
-}
-/*done*/

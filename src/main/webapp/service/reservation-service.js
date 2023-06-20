@@ -1,4 +1,4 @@
-export class CreateReservation{
+export class ReservationService {
 
     constructor() {
     }

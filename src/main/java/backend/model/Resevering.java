@@ -1,19 +1,22 @@
 package backend.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 public class Resevering {
 
     private String datum;
-    private int aantal;
     private String tijd;
+    private int aantal;
     private static ArrayList<Resevering> alleReseveringen = new ArrayList<Resevering>();
 
-    public Resevering(String datum, String uren, int aantal) {
+    public Resevering(@JsonProperty("naam")String datum,
+                      @JsonProperty("tijd")String tijd,
+                      @JsonProperty("aantal")int aantal) {
         this.datum = datum;
+        this.tijd = tijd;
         this.aantal = aantal;
-        this.tijd = uren;
-        alleReseveringen.add(this);
     }
 
     public String  getDatum() {
@@ -36,4 +39,6 @@ public class Resevering {
     public static void  setAlleReseveringen(ArrayList<Resevering> dataAlleReseveringen) {
         alleReseveringen = dataAlleReseveringen;
     }
+
+
 }
