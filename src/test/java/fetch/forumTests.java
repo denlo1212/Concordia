@@ -1,17 +1,18 @@
 package fetch;
 
 import backend.model.Offerte;
+import backend.model.Resevering;
 import backend.webservices.OfferteResource;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import backend.webservices.ReservationResource;
 import org.junit.jupiter.api.BeforeEach;
 
 import javax.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
 
-public class offerte_test {
+public class forumTests {
     @BeforeEach
     public void init(){
 
@@ -31,8 +32,9 @@ public class offerte_test {
 
         // Assert that the response status is OK
         assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
-        for(Offerte offerte: Offerte.getAlleOffertes()){
-            System.out.println(offerte.getTelefoonnummer());
+
+        Offerte offerte = (Offerte) response.getEntity();
+
             assertEquals("John Doe", offerte.getNaam());
             assertEquals(123456789, offerte.getTelefoonnummer());
             assertEquals("Birthday", offerte.getType_feest());
@@ -40,7 +42,18 @@ public class offerte_test {
             assertEquals("2023-06-08", offerte.getDatum());
             assertEquals(50, offerte.getAantal());
             assertEquals("Some additional information", offerte.getOverig());
-        }
+
+    }
+
+    @Test
+    public void testResevering(){
+        Resevering resevering = new Resevering("2024-06-06", "15:30", 3);
+        ReservationResource resevationresource = new ReservationResource();
+        Response response = resevationresource.createReservation(resevering);
+        assertEquals(Response.Status.OK.getStatusCode() ,response.getStatus());
+        Resevering resevering1 = (Resevering) response.getEntity();
+        assertTrue(resevering.getDatum().equals(resevering1.getDatum()));
+
     }
 }
 

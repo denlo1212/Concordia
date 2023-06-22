@@ -18,7 +18,7 @@ public class DataManager<T> {
 
     public void loadData() throws IOException, ClassNotFoundException {
 
-        FileInputStream fis = new FileInputStream("src/assets/classData/Data.obj");
+        FileInputStream fis = new FileInputStream("D:\\School projects\\Year 1\\conco\\Concordia_website\\src\\assets\\Data.txt");
         ObjectInputStream ois = new ObjectInputStream(fis);
 
         ArrayList<T> objects=new ArrayList<>();
@@ -39,7 +39,7 @@ public class DataManager<T> {
     public void saveData(T obj, T obj2, T obj3) throws IOException {
         ArrayList<T> objects=new ArrayList<>();
 
-        OutputStream fos = Files.newOutputStream(Path.of("src/assets/Data.obj"));
+        OutputStream fos = Files.newOutputStream(Path.of("D:\\School projects\\Year 1\\conco\\Concordia_website\\src\\assets\\Data.txt"));
         ObjectOutputStream oos = new ObjectOutputStream(fos);
 
         objects.add(obj);

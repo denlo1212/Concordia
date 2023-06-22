@@ -1,8 +1,6 @@
 package backend.webservices;
 
 import backend.model.Resevering;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

@@ -9,6 +9,7 @@ import backend.utils.DataManager;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -55,8 +56,8 @@ public class MyServletContextListener implements ServletContextListener {
 //        } catch (ClassNotFoundException e) {
 //            throw new RuntimeException(e);
 //        }
-
-        System.out.println("Initializing application");
+//
+//        System.out.println("Initializing application");
     }
 
     @Override

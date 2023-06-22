@@ -7,18 +7,15 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 
 
-import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.AbstractMap;
 import java.util.Date;
-import java.util.List;
 
 @Path("login")
-public class loginResource {
+public class LoginResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
