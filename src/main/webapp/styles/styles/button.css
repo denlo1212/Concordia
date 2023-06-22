@@ -6,6 +6,7 @@ button{
     cursor: pointer;
     transition: all 0.3s ease 0s;
     color: white;
+
 }
 
 button:hover{

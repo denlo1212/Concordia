@@ -5,17 +5,6 @@ import LoginService from "../service/login-service.js";
 
 let service = new LoginService();
 
-function refresh() {
-    login.style
-    if (service.isLoggedIn()) {
-        document.forms.login.style = "display:none";
-        document.forms.logout.style = "display:block";
-    } else {
-        document.forms.logout.style = "display:none";
-        document.forms.login.style = "display:block";
-    }
-}
-
 document.forms.login.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -26,8 +15,12 @@ document.forms.login.addEventListener('submit', event => {
         .then((data) => {
             const token = data.jwt;
             localStorage.setItem('token', token);
-            window.location.reload();
+            // window.location.reload();
+            console.log(token)
+
+            alert("U bent ingelogd");
         })
+
         .catch(error => {
             console.log(error);
             alert("Geen correcte gegevens")
@@ -37,30 +30,5 @@ document.forms.login.addEventListener('submit', event => {
 
 
 
-
-// document.forms.login.addEventListener('submit', event => {
-//     event.preventDefault();
-//
-//     service.logout()
-//         .then(() => {
-//             window.location.reload();
-//             alert("je bent uitgelogt")
-//         })
-//
-//         .catch(error => {
-//             console.log(error);
-//             alert("er ging iets fout");
-//         });
-// });
-//
-// refresh();
-
-// service.getUser().then(user => {
-//     if (!user) {
-//         service.logout();
-//     }
-//
-//     refresh();
-// })
 
 

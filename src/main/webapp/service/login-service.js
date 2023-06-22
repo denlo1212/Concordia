@@ -5,11 +5,8 @@ export default class LoginService {
     link = "/concordia"
 
     isLoggedIn() {
-
         const token = localStorage.getItem("token")
         return !!token;
-
-
     }
 
     login(username, password) {
@@ -22,7 +19,6 @@ export default class LoginService {
             },
         }).then(response => {
             if (response.ok) {
-                console.log(response.json)
                 return response.json();
             } else {
 
@@ -34,6 +30,7 @@ export default class LoginService {
 
     getUser() {
         // TODO: Implement logic to fetch user information using a GET request
+        const token = localStorage.getItem("token");
         return fetch(`${this.link}/login`, {
             method: 'GET',
             headers: {
@@ -44,10 +41,11 @@ export default class LoginService {
         })
             .then(response => {
                 if (response.ok) {
-                    return response.json();
+                    return response.text();
                 }
                 else {
-                    return Promise.reject('Failed to retrieve user information');
+
+                    return response;
                 }
             })
             .catch(error => {
