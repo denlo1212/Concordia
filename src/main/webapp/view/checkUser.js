@@ -1,7 +1,7 @@
 // Deze javascript file is puur een 'voorbeeld-frontend' en -hoeft- niet aangepast te worden. In principe hoef je alleen
 // de ...-service.js files in te vullen met de juiste promise-logica en dan zou de UI moeten werken.
 // Uiteraard -mag- je deze files wel aanpassen, want heel fraai is deze UI nou ook weer niet:)
-import LoginService from "../service/login-service.js";
+import LoginService from "../service/loginService.js";
 
 let service = new LoginService();
 
@@ -49,8 +49,8 @@ function updateNavigation(){
     const navLinks = document.getElementsByClassName("nav_links")[0];
 
     const newLink1 = document.createElement("a");
-    newLink1.href = "new_link1.html";
-    newLink1.textContent = "New Link 1";
+    newLink1.href = "../pages/showOfferte.html";
+    newLink1.textContent = "offertes";
 
     const newLink2 = document.createElement("a");
     newLink2.href = "new_link2.html";

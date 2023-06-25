@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concordia</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free shit baby!">
+    <meta name="keywords" content="idk something">
+    <meta name="author" content="Danilo Bos">
+    <meta name="viewport" content="width=device-with, initial-scale1.0">
+    <link rel="stylesheet" href="../styles/offertes.css">
+    <script type="module" src="../view/offertes.js"></script>
+    <script type="module" src="../view/checkUser.js"></script>
+    <link rel="icon" href="../assets/img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+<header>
+    <img alt="logo" src="../assets/img/logo.png"
+         width = "200"
+         heigt = "100"/>
+
+    <nav>
+        <ul class="nav_links">
+            <li><a href="../index.html">homepage </a></li>
+            <li><a href="../pages/resevering.html">reseveringen </a></li>
+            <li><a href="../pages/zaalverhuur.html">zaalverhuur </a></li>
+        </ul>
+    </nav>
+    <div id="loginButtonContainer">
+        <button id="loginButton">Login</button>
+    </div>
+
+</header>
+<main>
+    <p class="offertes"></p>
+    <template id="offerte-template">
+        <article id="offerteTitle" class="offerte">
+            <h2>Title offerte</h2>
+            <label for="telefoonnummer">telefoonnummer:</label>
+            <p id="telefoonnummer" class="telefoonnummers"></p>
+
+            <label for="feest">type partij:</label>
+            <p id="feest" class="feesten"></p>
+
+            <label for="email">email:</label>
+            <p id="email" class="emails"></p>
+
+            <label for="man">aantal personen:</label>
+            <p id="man" class="aantal"></p>
+
+            <label for="rest">overige wensen:</label>
+            <p id="rest" class="overig"></p>
+
+<!--            <label for="time">datum:</label>-->
+            <time id="time" datetime=""> Date</time>
+
+
+        </article>
+    </template>
+
+</main>
+</body>
+</html>

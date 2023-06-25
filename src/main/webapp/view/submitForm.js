@@ -1,6 +1,6 @@
-// import CreateOfferte from "../service/CreateOfferte";
-import { CreateOfferte } from "../service/CreateOfferte.js";
-const createOfferte = new CreateOfferte();
+// import OfferteService from "../service/OfferteService";
+import { OfferteService } from "../service/offerteService.js";
+const service = new OfferteService();
 
 
 
@@ -20,7 +20,7 @@ function extractOfferteFromForm(event) {
     const overig = document.querySelector('#overig').value;
 
 
-    createOfferte.formSubmit(naam, phone, typeZaal, email, date, aantal, overig);
+    service.formSubmit(naam, phone, typeZaal, email, date, aantal, overig);
     // formSubmit(naam, phone, typeZaal, email, date, aantal, overig);
 
     const form = document.querySelector('form');

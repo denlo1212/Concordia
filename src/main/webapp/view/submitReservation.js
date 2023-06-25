@@ -1,4 +1,4 @@
-import { ReservationService} from "../service/reservation-service.js";
+import { ReservationService} from "../service/reservationService.js";
 const createReservation = new ReservationService();
 
 // script.js

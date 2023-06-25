@@ -12,7 +12,7 @@ public class OfferteResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response test(){
+    public Response getOffertes(){
         return Response.ok(Offerte.getAlleOffertes()).build();
     }
 

@@ -1,10 +1,12 @@
-export class CreateOfferte {
+export class OfferteService {
 
     constructor() {
     }
 
+    link = "/concordia"
+
     formSubmit(name, phone, typeZaal, email, datum, aantal, overig) {
-        return fetch('http://localhost:8080/concordia/offerte', {
+        return fetch(`${this.link}/offerte`, {
             method: "POST",
             body: JSON.stringify({
                 naam: name,
@@ -15,6 +17,22 @@ export class CreateOfferte {
                 aantal: aantal,
                 overig: overig
             }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    return response.status;
+                }
+                return response.json();
+            });
+    }
+
+    getOffertes() {
+        return fetch(`${this.link}/offerte`, {
+            method: "GET",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

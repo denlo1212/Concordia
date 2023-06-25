@@ -3,8 +3,10 @@ export class ReservationService {
     constructor() {
     }
 
+    link = "/concordia"
+
     reservationSubmit(date, time, aantal){
-        return fetch('http://localhost:8080/concordia/reservation',{
+        return fetch(`${this.link}/reservation`,{
            method: "post",
            body: JSON.stringify({
                datum: date,

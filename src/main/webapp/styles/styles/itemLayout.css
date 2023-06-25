@@ -1,0 +1,52 @@
+.offertes {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(auto-fill, 500px);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    /*background-color: lightslategrey;*/
+}
+
+.offerte {
+    background-color: lightslategrey;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.offerte h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.offerte p {
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    background-color: #24252A;
+    color: green;
+}
+
+.offerte time {
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: darkblue;
+}
+
+.offerte:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
