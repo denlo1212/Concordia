@@ -31,7 +31,7 @@ function renderOfferte(offerte) {
  * To break down the complexity of the rendering this function uses the renderTrip function to render a single Trip.
  */
 function render() {
-    const offertesContainer = document.querySelector('.offertes'); // Update the selector to match the container element
+    const offertesContainer = document.querySelector('.items'); // Update the selector to match the container element
     offertesContainer.innerHTML = '';
     let offertes;
 

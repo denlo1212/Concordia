@@ -1,4 +1,4 @@
-.offertes {
+.items {
     display: grid;
     grid-auto-columns: auto;
     grid-template-columns: repeat(auto-fill, 500px);
@@ -10,7 +10,7 @@
     /*background-color: lightslategrey;*/
 }
 
-.offerte {
+.item {
     background-color: lightslategrey;
     padding: 1rem;
     border-radius: 5px;
@@ -19,19 +19,19 @@
     width: 400px;
 }
 
-.offerte h2 {
+.item h2 {
     margin-top: 0;
     font-size: 1.5rem;
 }
 
-.offerte p {
+.item p {
     margin: 0.5rem 0;
     border-radius: 4px;
     background-color: #24252A;
     color: green;
 }
 
-.offerte time {
+.item time {
     margin: 0.5rem 0;
     border-radius: 4px;
     text-align: center;
@@ -42,10 +42,42 @@
     color: darkblue;
 }
 
-.offerte:hover {
+.item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+#reseveringen {
+    grid-template-columns: repeat(auto-fill, 200px);
+
+}
+
+#reseveringTitle {
+    width: 100px;
+}
+
+
+
+#datumParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#datumChild {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#datumChild input,
+#datumChild button {
+    margin: 10px; /* Adjust the margin as needed */
+}
+
+
 
 
 

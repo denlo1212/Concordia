@@ -12,7 +12,7 @@ public class ReservationResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response test(){
+    public Response getReseveringen(){
         return Response.ok(Resevering.getAlleReseveringen()).build();
     }
 

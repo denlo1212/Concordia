@@ -1,0 +1,59 @@
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: lightslategrey;
+}
+
+main img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+main h2 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style-type: disc;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+main a {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main ul li {
+    margin-top: 20px;
+}
+
+main ul li::before {
+    content: "\2022";
+    color: #555;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}

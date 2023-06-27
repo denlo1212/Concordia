@@ -25,6 +25,24 @@ export class ReservationService {
             return response.json();
         });
     }
+
+    getReseverings(){
+        return fetch(`${this.link}/reservation`,{
+            method: "get",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+
+        }).then((response) => {
+            if (!response.ok) {
+                return response.status;
+            }
+            return response.json();
+        });
+
+    }
+
 }
 
 

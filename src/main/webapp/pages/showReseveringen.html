@@ -7,8 +7,8 @@
     <meta name="keywords" content="idk something">
     <meta name="author" content="Danilo Bos">
     <meta name="viewport" content="width=device-with, initial-scale1.0">
-    <link rel="stylesheet" href="../styles/offertes.css">
-    <script type="module" src="../view/offertes.js"></script>
+    <link rel="stylesheet" href="../styles/showReseveringen.css">
+    <script type="module" src="../view/reseveringen.js"></script>
     <script type="module" src="../view/checkUser.js"></script>
     <link rel="icon" href="../assets/img/icon.png" type="image/x-icon">
 </head>
@@ -32,29 +32,31 @@
 
 </header>
 <main>
-    <p class="items"></p>
-    <template id="offerte-template">
-        <article id="offerteTitle" class="item">
-            <h2>Title offerte</h2>
-            <label for="telefoonnummer">telefoonnummer:</label>
-            <p id="telefoonnummer" class="telefoonnummers"></p>
 
-            <label for="feest">type partij:</label>
-            <p id="feest" class="feesten"></p>
 
-            <label for="email">email:</label>
-            <p id="email" class="emails"></p>
 
-            <label for="man">aantal personen:</label>
+    <div id="datumParent" >
+        <div id="datumChild">
+            <input id="datum" type="date" value="t">
+            <button id="reseveringButton"> show reseveringen </button>
+        </div>
+    </div>
+
+    <div>
+        <p id="reseveringen" class="items"></p>
+    </div>
+
+
+
+    <template id="resevering-template">
+        <article id="reseveringTitle" class="item">
+
+            <label for="man">aantal:</label>
             <p id="man" class="aantal"></p>
 
-            <label for="rest">overige wensen:</label>
-            <p id="rest" class="overig"></p>
-
-<!--            <label for="time">datum:</label>-->
-            <time id="time" datetime=""> Date</time>
-
-
+            <label for="tijd">tijd:</label>
+            <p id="tijd" class="tijden"></p>
+<!--            <time id="time" datetime=""> Date</time>-->
         </article>
     </template>
 

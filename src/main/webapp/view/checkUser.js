@@ -53,8 +53,8 @@ function updateNavigation(){
     newLink1.textContent = "offertes";
 
     const newLink2 = document.createElement("a");
-    newLink2.href = "new_link2.html";
-    newLink2.textContent = "New Link 2";
+    newLink2.href = "../pages/showReseveringen.html";
+    newLink2.textContent = "reseveringen";
 
     const newItem1 = document.createElement("li");
     newItem1.appendChild(newLink1);

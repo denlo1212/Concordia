@@ -10,6 +10,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -38,12 +39,29 @@ public class MyServletContextListener implements ServletContextListener {
 
         Offerte.setAlleOffertes(offertes);
 
-        Resevering resevering1 = new Resevering("2024-06-06", "15:30", 5);
-        Resevering resevering2 = new Resevering("2024-06-06", "15:30", 10);
-        Resevering resevering3 = new Resevering("2024-06-06", "15:30", 3);
+        LocalDate today = LocalDate.now();
+        String time = "15:30";
 
-        ArrayList<Resevering> reseveringen = new ArrayList<>();
-        reseveringen.addAll(Arrays.asList(resevering1, resevering2, resevering3));
+        LocalDate tomorrow = today.plusDays(1);
+
+
+        Resevering resevering1 = new Resevering(tomorrow.toString(), "14:30", 5);
+        Resevering resevering2 = new Resevering(tomorrow.toString(), "15:45", 10);
+        Resevering resevering3 = new Resevering(tomorrow.toString(), "16:40", 3);
+        Resevering resevering4 = new Resevering(today.toString(), time, 5);
+        Resevering resevering5 = new Resevering(today.toString(), time, 7);
+        Resevering resevering6 = new Resevering(today.toString(), time, 3);
+        Resevering resevering7 = new Resevering(today.toString(), time, 5);
+        Resevering resevering8 = new Resevering(today.toString(), time, 2);
+        Resevering resevering9 = new Resevering(today.toString(), time, 3);
+        Resevering resevering10 = new Resevering(today.toString(), time, 5);
+        Resevering resevering11 = new Resevering(today.toString(), time, 2);
+        Resevering resevering12 = new Resevering(today.toString(), time, 3);
+
+        ArrayList<Resevering> reseveringen = new ArrayList<>(Arrays.asList(
+                resevering1, resevering2, resevering3, resevering4, resevering5, resevering6,
+                resevering7, resevering8, resevering9, resevering10, resevering11, resevering12
+        ));
 
         Resevering.setAlleReseveringen(reseveringen);
 
