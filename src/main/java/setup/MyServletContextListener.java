@@ -48,15 +48,15 @@ public class MyServletContextListener implements ServletContextListener {
         Resevering resevering1 = new Resevering(tomorrow.toString(), "14:30", 5);
         Resevering resevering2 = new Resevering(tomorrow.toString(), "15:45", 10);
         Resevering resevering3 = new Resevering(tomorrow.toString(), "16:40", 3);
-        Resevering resevering4 = new Resevering(today.toString(), time, 5);
-        Resevering resevering5 = new Resevering(today.toString(), time, 7);
-        Resevering resevering6 = new Resevering(today.toString(), time, 3);
-        Resevering resevering7 = new Resevering(today.toString(), time, 5);
-        Resevering resevering8 = new Resevering(today.toString(), time, 2);
-        Resevering resevering9 = new Resevering(today.toString(), time, 3);
-        Resevering resevering10 = new Resevering(today.toString(), time, 5);
-        Resevering resevering11 = new Resevering(today.toString(), time, 2);
-        Resevering resevering12 = new Resevering(today.toString(), time, 3);
+        Resevering resevering4 = new Resevering(today.toString(), "13:00", 5);
+        Resevering resevering5 = new Resevering(today.toString(), "14:10", 7);
+        Resevering resevering6 = new Resevering(today.toString(), "14:30", 3);
+        Resevering resevering7 = new Resevering(today.toString(), "15:00", 5);
+        Resevering resevering8 = new Resevering(today.toString(), "15:30", 2);
+        Resevering resevering9 = new Resevering(today.toString(), "16:30", 3);
+        Resevering resevering10 = new Resevering(today.toString(), "16:30", 5);
+        Resevering resevering11 = new Resevering(today.toString(), "17:30", 2);
+        Resevering resevering12 = new Resevering(today.toString(), "19:20", 3);
 
         ArrayList<Resevering> reseveringen = new ArrayList<>(Arrays.asList(
                 resevering1, resevering2, resevering3, resevering4, resevering5, resevering6,
